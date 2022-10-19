@@ -15,7 +15,7 @@ def local_threshold(image):
     gray = cv.cvtColor(image,cv.COLOR_RGB2GRAY)
     binary = cv.adaptiveThreshold(gray,255,cv.ADAPTIVE_THRESH_GAUSSIAN_C,cv.THRESH_BINARY,25,10)
     cv.namedWindow("binary1", cv.WINDOW_NORMAL)
-    cv.imshow("binary1", binary)
+    cv.imshow("binary12", binary)
 
 # 用户自己计算阈值
 def custom_threshold(image):
