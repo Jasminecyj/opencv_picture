@@ -19,7 +19,7 @@ def local_threshold(image):
 
 # 用户自己计算阈值
 def custom_threshold(image):
-    gray = cv.cvtColor(image, cv.COLOR_RGB2GRAY)
+    gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     h,w = gray.shape[:2]
     m = np.reshape(gray,[1,w*h])
     mean = m.sum()/(w*h)
