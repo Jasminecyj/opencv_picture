@@ -5,7 +5,7 @@ import numpy as np
 def threshold_demo(image):
     gray = cv.cvtColor(image,cv.COLOR_BGR2GRAY) #把输入图像灰度化
     #直接阈值化是对输入的单通道矩阵逐像素进行阈值化分割。
-    ret,binary = cv.threshold(gray,0,255,cv.THRESH_BINARY|cv.THRESH_TRIANGLE)
+    ret,binary = cv.threshold(gray,127,255,cv.THRESH_BINARY|cv.THRESH_TRIANGLE)
     print("threshold value %s"%ret)
     cv.namedWindow("binary0",cv.WINDOW_NORMAL)
     cv.imshow("binary0",binary)
